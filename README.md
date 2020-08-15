@@ -1,35 +1,45 @@
 # node_csv2json
-csv�t�@�C����JSON�t�@�C���ɕϊ����܂��B
+csvファイルをJSONファイルに変換します。
 
-�t�@�C���̓R�}���h���C�������Ŏw�肵�܂��B
+ファイルはコマンドライン引数で指定します。
 
-## ����
+## 注意
 
-csv�t�@�C���̕����R�[�h��UTF8�ɂ��Ă��������B
+csvファイルの文字コードはUTF8にしてください。
 
-shiftjis���ƕ����������܂��B
+shiftjisだと文字化けします。
 
-# �y�����z���W���[���̃C���X�g�[��
+# 【準備】モジュールのインストール
 
 ```
 npm install csv
 npm install commander
 ```
 
-# ���s
+# 実行
 ```
-node csv2json.js [�ǂݍ��݃t�@�C����.csv] [�ۑ��t�@�C����.json]
+node csv2json.js [読み込みファイル名.csv] [保存ファイル名.json]
 
-//��
+//例
 node csv2json.js hoge.csv aaa.json
 ```
 
 ```
-//����
-hoge.csv��ǂݍ��݂܂���
-aaa.json��ۑ����܂���
+//結果
+hoge.csvを読み込みました
+aaa.jsonを保存しました
 
 ```
 
+# 使用例
+
+ネットから適当にデータを拾ってきてcsv(UTF8)ファイルを作ります。
+
+![1](images/csv2json1.png)
+
+実行
+
+![2](images/csv2json2.png)
+
 # ToDo
-- �����R�[�h�΍�
+- 文字コード対策
